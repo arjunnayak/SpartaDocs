@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SpartaDocs Sign Up</title>
+	<style type="text/css">
+		.signup-form {
+			max-width: 300px;
+			margin: 0 auto;
+		}
+		#inputUsername {
+		  margin-bottom: -1px;
+		  border-bottom-right-radius: 0;
+		  border-bottom-left-radius: 0;
+		}
+		#inputPassword {
+			border-top-left-radius: 0;
+  			border-top-right-radius: 0;
+		}
+	</style>
+</head>
+
+<!-- SIGN UP FORM  -->
+   <div class="container" ng-controller="SignupController as postCtrl">
+     <form class="signup-form" ng-submit="postCtrl.postForm()">
+       <h2>Signup</h2>
+       <br>
+       First Name: <input type="text" id="inputFName" class="form-control" placeholder="John" required ng-model="postCtrl.inputData.fname">
+       Last Name: <input type="text" id="inputLName" class="form-control" placeholder="Smith" required ng-model="postCtrl.inputData.lname">
+       School ID: <input type="text" id="inputSID" class="form-control" placeholder="012345678" required ng-model="postCtrl.inputData.sid">
+       Major: <select name="major" id="inputMajor" class="form-control" required ng-model="postCtrl.inputData.major">
+		<option value="Computer Science">Computer Science</option>
+ 			<option value="Computer Engineering">Computer Engineering</option>
+	</select><br>
+       Email: <input type="text" id="inputEmail" class="form-control" placeholder="example@sjsu.edu" required autofocus ng-model="postCtrl.inputData.email">
+       Password: <input type="password" id="inputPassword" class="form-control" required ng-model="postCtrl.inputData.password">
+       <br>
+       <input type="radio" required ng-model="postCtrl.inputData.userType" name="userType" value="student"> Student
+ 		<input type="radio" required ng-model="postCtrl.inputData.userType" name="userType" value="faculty"> Faculty
+	<br>
+	<div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+     </form>
+   </div> 

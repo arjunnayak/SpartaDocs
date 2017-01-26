@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SpartaDocs</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    
+    </head>
+    <body class="skin-black">
+      <div class="skin-black">
+        <header class="header">
+            <a href="#/dashboard.html" class="logo">
+              
+                SpartaDocs
+            </a>
+          
+            <nav class="navbar navbar-static-top" role="navigation">
+           
+                <a href="" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                     
+                       
+
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <span>{{ userData.FName }}<i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                                <li class="dropdown-header text-center">Account</li>
+
+                        
+                                <li class="divider"></li>
+
+                                    <li>
+                                        <a href="#">
+                                        <i class="fa fa-user fa-fw pull-right"></i>
+                                            Profile
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-user-settings">
+                                        <i class="fa fa-cog fa-fw pull-right"></i>
+                                            Settings
+                                        </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+          
+            <aside class="left-side sidebar-offcanvas" style="min-height:1200px;">
+                <section class="sidebar">
+              
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/userIcon.jpg" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p style="padding-top: 12px">Hello, {{ userData.FName }}</p>
+
+                            
+                        </div>
+                    </div>
+               
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                   
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="#/dashboard.html">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#/documentTracker.html">
+                                <i class="fa fa-gavel"></i> <span>Document Tracker</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#/graduation_form.html">
+                                <i class="fa fa-globe"></i> <span>Graduation Form</span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="#/holdrelease_form.html">
+                                <i class="fa fa-globe"></i> <span>Hold Release Form</span>
+                            </a>
+                        </li>
+                        
+
+                    </ul>
+              
+            </aside>
+
+        
+            <div class="right-side">
+
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                          
+                            <ul class="breadcrumb">
+                                <li><a href="#/dashboard.html"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="#/dashboard.html">Dashboard</a></li>
+                                <li class="active">Document Tracker</li>
+                            </ul>
+                      </div>
+
+
+                  </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <section class="panel">
+                              <header class="panel-heading">
+                                  Work Progress
+                            </header>
+                            <div class="panel-body table-responsive">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Document</th>
+                                      <th>Date Submitted</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                               <tr ng-repeat = "doc in data.documents" ng-click="go(doc.DocID, doc.Date, doc.DocName)">
+                                  <td>{{ doc.DocID }}</td>
+                                  <td><div>{{ doc.DocName }}</div></td>
+                                  <td><div>{{ doc.Date}}</div></td>
+                              </tr>
+                              
+                          </tbody>
+                      </table>
+                  </div>
+              </section>
+                        </div>
+                    </div>
+                   
+           
+        </div><!-- ./wrapper -->
+
+
+      </div>
+    </body>
+</html>

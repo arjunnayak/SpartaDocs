@@ -1,0 +1,6 @@
+SVN Repo: https://sourceforge.net/p/massware/code/HEAD/tree/
+Browser URL: http://localhost:8080/MASSware/#/
+
+Hints:
+1. User must verify email after creating an account. Open a new window/tab in your web browser in order to do so. Please be patient, email can take up to 1-2 minutes to appear in your inbox.
+ After Creating a new document refresh the page to view the new versions on the document tracker. 

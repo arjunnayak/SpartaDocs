@@ -1,0 +1,11 @@
+Current Users: 
+	Frank Daniels:
+		User:frank.daniels@sjsu.edu
+		Password:frankdaniels
+	Jack Daniels
+		User:jack.daniels@sjsu.edu
+		Password:password
+	Malik Khalil
+		User:malik.khalil@sjsu.edu
+		Password:password
+

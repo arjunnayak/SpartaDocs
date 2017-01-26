@@ -1,0 +1,1 @@
+SELECT `Email` FROM students WHERE Verified = 'F';

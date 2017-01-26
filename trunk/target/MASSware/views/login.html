@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		.login-form {
+			max-width: 300px;
+			margin: 0 auto;
+		}
+		#inputUsername {
+		  margin-bottom: -1px;
+		  border-bottom-right-radius: 0;
+		  border-bottom-left-radius: 0;
+		}
+		#inputPassword {
+			border-top-left-radius: 0;
+  			border-top-right-radius: 0;
+		}
+	</style>
+  </head>
+
+<title>SpartaDocs Login</title>
+<div class="container" ng-controller="LoginController as postCtrl">
+<div class="form">
+	<form class="login-form" ng-submit="postCtrl.postForm()">
+		<h2>SpartaDocs</h2>
+		<br> <label for="inputUsername" class="sr-only">Email</label> <input
+			type="text" id="inputUsername" class="form-control"
+			placeholder="Email" required autofocus
+			ng-model="postCtrl.inputData.email"> <label
+			for="inputPassword" class="sr-only">Password</label> <input
+			type="password" id="inputPassword" class="form-control"
+			placeholder="Password" required
+			ng-model="postCtrl.inputData.password"> <br> <input
+			type="radio" required ng-model="postCtrl.inputData.userType"
+			name="userType" value="student"> Student <input type="radio"
+			required ng-model="postCtrl.inputData.userType" name="userType"
+			value="faculty"> Faculty <br>
+		<div class="alert alert-danger" role="alert" ng-show="errorMsg">{{errorMsg}}</div>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+			in</button>
+		<br> <a href="#/signup.html">Create an account</a>
+	</form>
+	</div>
+</div>
+</html>

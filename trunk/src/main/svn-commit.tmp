@@ -1,0 +1,8 @@
+
+--This line, and those below, will be ignored--
+
+M    java/edu/sjsu/db/AdvisorDao.java
+M    java/edu/sjsu/db/StudentDao.java
+M    java/edu/sjsu/rest/LoginService.java
+M    java/edu/sjsu/utils/DBUtils.java
+M    webapp/index.html
